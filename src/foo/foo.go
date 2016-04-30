@@ -1,8 +1,11 @@
 package main
 
-import "syscall"
-
+/*
+#include <stdlib.h>
+*/
 import "C"
+
+import "syscall"
 
 var initCh = make(chan int, 1)
 
