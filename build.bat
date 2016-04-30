@@ -13,4 +13,4 @@ gcc -I . -fPIC -m64 -pthread -fmessage-length=0 -fno-common -o %WORK%\foo\_obj\_
 go tool compile -o %WORK%\foo.a -trimpath %WORK% -p main -I %WORK% -pack %WORK%\foo\_obj\_cgo_gotypes.go %WORK%\foo\_obj\foo.cgo1.go %WORK%\foo\_obj\_cgo_import.go
 go tool pack r %WORK%\foo.a %WORK%\foo\_obj\_all.o
 cd %GOPATH%
-go tool link -o %WORK%\foo\_obj\exe\a.out.a -L %WORK% -extld=gcc -buldmode=c-archive %WORK%\foo.a
+go tool link -o %WORK%\foo\_obj\exe\a.out.a -L %WORK% -buildmode=c-archive %WORK%\foo.a
